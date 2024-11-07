@@ -1,0 +1,51 @@
+# Template configuration
+_min_copier_version: "9.0.0"
+
+# Questions
+package_name:
+  type: str
+  help: What is your package name?
+  validator: >-
+    {% if not (package_name | regex_search("^[a-zA-Z][a-zA-Z0-9_]*$")) %}
+      Package name must be a valid Python identifier
+    {% endif %}
+
+package_description:
+  type: str
+  help: Brief description of your package
+  default: This is the Python package {{ package_name }}.
+
+author_name:
+  type: str
+  help: Your name
+  default: Tony
+
+author_email:
+  type: str
+  help: Your email address
+  default: iamtonylee@gmail.com
+
+package_version:
+  type: str
+  help: Initial version
+  default: "0.1.0"
+
+python_min_version:
+  type: str
+  help: Minimum Python version
+  default: "3.13"
+  choices:
+    - "3.13"
+    - "3.12"
+    - "3.10"
+    - "3.9"
+    - "3.8"
+
+package_license:
+  type: str
+  help: License
+  default: "BSD-3-Clause"
+  choices:
+    - "BSD-3-Clause"
+    - "Apache-2.0"
+    - "MIT"

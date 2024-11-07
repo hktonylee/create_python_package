@@ -1,0 +1,41 @@
+[project]
+name = "{{package_name}}"
+version = "{{package_version}}"
+description = "{{package_description}}"
+readme = "README.md"
+requires-python = ">={{python_min_version}}"
+license = {text = "{{package_license}}"}
+authors = [
+    { name = "{{author_name}}", email = "{{author_email}}" },
+]
+
+dependencies = [
+
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+]
+
+[project.urls]
+Homepage = "https://github.com/{{github_username}}/{{package_name}}"
+Repository = "https://github.com/{{github_username}}/{{package_name}}"
+
+[project.scripts]
+{{package_name}} = "{{package_name}}.cli:main"
+
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["./src/"]
+include = ["{{package_name}}"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["{{package_name}}"]
