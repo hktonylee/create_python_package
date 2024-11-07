@@ -1,0 +1,14 @@
+name: Deploy to PyPI
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-and-upload-wheel-file-to-pypi:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install -U build
+      - run: python -m build

@@ -2,6 +2,9 @@
 _min_copier_version: "9.0.0"
 _exclude:
   - /.git
+  - /.github
+  - /.gitignore
+  - /copier.yml
   - /README.md
 
 # Questions
@@ -21,12 +24,14 @@ package_description:
 author_name:
   type: str
   help: Your name
-  default: Tony
 
 author_email:
   type: str
   help: Your email address
-  default: iamtonylee@gmail.com
+
+github_username:
+  type: str
+  help: Your GitHub username
 
 package_version:
   type: str
@@ -52,3 +57,11 @@ package_license:
     - "BSD-3-Clause"
     - "Apache-2.0"
     - "MIT"
+
+ci:
+  type: str
+  help: The CI/CD platform
+  default: "none"
+  choices:
+    - "github"
+    - "none"

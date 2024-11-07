@@ -9,5 +9,5 @@ Usage:
 pipx install copier
 
 # Run the copier. This will create a new folder container the package files.
-copier copy $PATH_TO_THIS_PACKAGE .
+copier copy https://github.com/hktonylee/create_python_package .
 ```
