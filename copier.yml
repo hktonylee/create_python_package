@@ -1,5 +1,8 @@
 # Template configuration
 _min_copier_version: "9.0.0"
+_exclude:
+  - /.git
+  - /README.md
 
 # Questions
 package_name:
