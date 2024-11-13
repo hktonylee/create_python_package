@@ -33,11 +33,6 @@ github_username:
   type: str
   help: Your GitHub username
 
-package_version:
-  type: str
-  help: Initial version
-  default: "0.1.0"
-
 python_min_version:
   type: str
   help: Minimum Python version
