@@ -49,6 +49,7 @@ package_license:
   help: License
   default: "BSD-3-Clause"
   choices:
+    - "Proprietary"
     - "BSD-3-Clause"
     - "Apache-2.0"
     - "MIT"
