@@ -48,4 +48,5 @@ repos:
         files: ^(pyproject\.toml|requirements\.txt)$
         args:
           - --no-emit-index-url
-exclude: /third_party/
+exclude: (third_party|stubs)/.*
+
